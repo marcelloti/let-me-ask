@@ -1,0 +1,11 @@
+- O node já suporta executar diretamente typescript. Porém para que isso funcione você precisa usar o tsconfig como configurado aqui (https://github.com/tsconfig/bases para
+  saber exatamente qual o tsconfig usar). Além disso o tsconfig do projeto tem mais algumas configurações adicionais.
+
+- Você precisa executar como "node --experimental-strip-types src/server.ts". Porém ao fazer isso, ao importar tipos é importante
+explicitar quando uma constante é um tipo. Exemplo:
+
+import {
+  serializerCompiler,
+  validatorCompiler,
+  type ZodTypeProvider // especificando que ZodTypeProvider é um tipo
+} from "fastify-type-provider-zod";

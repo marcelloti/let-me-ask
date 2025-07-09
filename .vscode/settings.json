@@ -1,0 +1,33 @@
+{
+  "editor.defaultFormatter": "@biomejs/biome",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    "source.organizeImports.biome": "explicit",
+    "source.fixAll.biome": "never"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "@biomejs/biome"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "@biomejs/biome"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "@biomejs/biome"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "@biomejs/biome"
+  },
+  "biome.lspBin": "/var/www/nlw-2025/server/node_modules/@biomejs/biome/bin/biome",
+  "biome.enableLinting": true,
+  "biome.enableFormatting": true,
+  "typescript.preferences.includePackageJsonAutoImports": "off",
+  "typescript.suggest.autoImports": false,
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+  "typescript.preferences.includeCompletionsForModuleExports": false,
+  "typescript.suggest.includeCompletionsForModuleExports": false
+}

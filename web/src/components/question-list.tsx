@@ -13,7 +13,7 @@ export function QuestionList(props: QuestionListProps){
     <div className="space-y-6">
         <div className="flex items-center justify-between">
           <h2 className="font-semibold text-2xl text-foreground">
-            Perguntas & Respostas
+            Questions & Answers
           </h2>
         </div>
 

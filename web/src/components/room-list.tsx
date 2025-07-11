@@ -35,7 +35,7 @@ export function RoomList(){
                       {dayjs(room.createdAt).toNow()}
                     </Badge>
                     <Badge variant="secondary">
-                      {room.questionsCount} pergunta(s)
+                      {room.questionsCount} answer(s)
                     </Badge>
                   </div>
               </div>

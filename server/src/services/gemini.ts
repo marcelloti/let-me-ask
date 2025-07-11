@@ -12,7 +12,7 @@ export async function transcribeAudio(audioAsBase64: string, mimeType: string){
     model,
     contents: [
       {
-        text: 'Transcreva o áudio para português do Brasil. Seja preciso e natural na transcrição. Mantenha a pontuação adequada e divida o texto em parágrafos quando for apropriado.'
+        text: 'Transcribe the audio to English. Be precise and natural in the transcription. Maintain proper punctuation and divide the text into paragraphs when appropriate.'
       },
       {
         inlineData: {
@@ -24,7 +24,7 @@ export async function transcribeAudio(audioAsBase64: string, mimeType: string){
   })
 
   if (!response.text){
-    throw new Error('Não foi possível converter o áudio')
+    throw new Error('Could not convert audio')
   }
 
   return response.text;
@@ -40,7 +40,7 @@ export async function generateEmbeddings(text: string){
   })
 
   if (!response.embeddings?.[0].values){
-    throw new Error('Não foi possível gerar os embeddings')
+    throw new Error('Could not generate embeddings')
   }
 
   return response.embeddings[0].values;
@@ -50,21 +50,21 @@ export async function generateAnswer(question: string, transcriptions: string[])
   const context = transcriptions.join('\n\n')
 
   const prompt = `
-    Com base no texto fornecido abaixo como contexto, responda a pergunta de forma clara e precisa em português do Brasil.
+    Based on the text provided below as context, answer the question clearly and accurately in English.
 
-    CONTEXTO:
+    CONTEXT:
     ${context}
 
-    PERGUNTA:
+    QUESTION:
     ${question}
 
-    INSTRUÇÕES:
-    - Use apenas informações contidas no contexto enviado
-    - Se a resposta não for encontrada no contexto, apenas responda apenas que não possui informações suficientes para responder
-    - Seja objetivo
-    - Mantenha um tom educativo e profissional
-    - Cite trechos relevantes do contexto se apropriado
-    - Se for citar o contexto, utilize o termo "conteúdo da aula"
+    INSTRUCTIONS:
+    - Use only information contained in the provided context
+    - If the answer is not found in the context, simply respond that you don't have enough information to answer
+    - Be objective
+    - Maintain an educational and professional tone
+    - Cite relevant excerpts from the context if appropriate
+    - If citing the context, use the term "class content"
   `.trim()
 
   const response = await gemini.models.generateContent({
@@ -77,7 +77,7 @@ export async function generateAnswer(question: string, transcriptions: string[])
   })
 
   if (!response){
-    throw new Error('Falha ao gerar resposta pelo Gemini')
+    throw new Error('Failed to generate response with Gemini')
   }
 
   return response.text;

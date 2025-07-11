@@ -9,3 +9,5 @@ import {
   validatorCompiler,
   type ZodTypeProvider // especificando que ZodTypeProvider é um tipo
 } from "fastify-type-provider-zod";
+
+- Interface otimista: mostra que algo foi cadastrado mesmo que não tenha sido. Se der erro, volta atrás

@@ -15,6 +15,13 @@
       "when": 1752094416076,
       "tag": "0001_blue_caretaker",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1752185952581,
+      "tag": "0002_whole_northstar",
+      "breakpoints": true
     }
   ]
 }

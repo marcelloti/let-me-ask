@@ -1,8 +1,9 @@
 {
-  "name": "web",
+  "name": "let-me-ask-web",
   "private": true,
   "version": "0.0.0",
   "license": "MIT",
+  "description": "AI-powered Q&A platform frontend with modern React interface",
   "type": "module",
   "scripts": {
     "dev": "vite",

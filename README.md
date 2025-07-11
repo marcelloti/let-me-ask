@@ -1,5 +1,18 @@
 # Let me Ask - AI-Powered Q&A Platform
 
+<p align="center">
+  <img src="./screenshot1.png" alt="Let me Ask - Home Page" width="80%" />
+  <br/>
+  <em>Home page - Room creation and list</em>
+</p>
+
+<p align="center">
+  <img src="./screenshot2.png" alt="Let me Ask - Q&A Room" width="80%" />
+  <br/>
+  <em>Q&A Room - Ask questions and get AI answers</em>
+</p>
+
+
 A modern web application that allows users to create rooms, ask questions, and receive AI-generated answers based on audio transcriptions. Built with React, Fastify, and Google Gemini AI.
 
 ## 🚀 Features

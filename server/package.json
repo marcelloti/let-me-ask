@@ -13,7 +13,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "2.0.6",
     "@types/dom-speech-recognition": "^0.0.6",
